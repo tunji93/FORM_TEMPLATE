@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$text-color : #3F3E3E;
+$text-color1 : #08BD37;
+$text-color2 : #333447;
+$text-color3: #252525;
+$text-color4 : #989898;
+$text-color5 : #3F3F3F;
+$text-color6 : #8F8B8B;
+
+$background-color: #E5E5E5;
+$background-color1: #F9F9F9;
+$background-color2: #FFFFFF;
+$background-color3: #FFF4EA;
+$border-color: #C4C4C4;
+
+
+$breakpoint-medium: 1224px;
+$breakpoint-small: 520px;
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box
+}
+
+body {
+    background: $background-color;
+    background-attachment: fixed;
+    color: $text-color;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.1px
+}
