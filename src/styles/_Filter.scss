@@ -1,0 +1,20 @@
+@import './_Base.scss';
+
+.filter{
+    // position:relative;
+    &__select{
+        min-width: 160px;
+        padding: 10px 23px;
+
+    }
+    &__type{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 13px;
+        position: absolute;
+        background-color: white;
+        left: 23px;
+        top: -6px
+    }
+}
