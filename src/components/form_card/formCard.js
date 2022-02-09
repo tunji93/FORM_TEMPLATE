@@ -9,7 +9,7 @@ const FormCard = () => {
         <p>engage your alumni network better with this alumni registration form template embeded in your website ...</p>
       </div>
       <div className = "card__bottom">
-        <h3>use template</h3>
+        <h3>Use Template</h3>
       </div>
     </div>
   )
