@@ -1,0 +1,15 @@
+@import "./_Base.scss";
+
+.sort-by {
+  display: flex;
+  direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  &__label {
+    font-style: normal;
+    font-weight: normal;
+    color: $text-color4;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}

@@ -1,14 +1,15 @@
-import React from "react"
-import FormCard from "./components/form_card/FormCard"
-import Search from "./components/Header/Search"
-import Filter from "./components/Header/Filter"
-
+import React from "react";
+import FormCard from "./components/Cards/formCard";
+import Header from "./components/Header/Header";
+import Alert from "./components/Alert";
 
 function App() {
-  const options = [{value:'all', name:'All'}]
+  const options = [{ value: "all", name: "All" }];
   return (
-    //<FormCard />
-    <Filter name='category' options={options} />
+    <>
+      <Header />
+      <Alert />;
+    </>
   );
 }
 
