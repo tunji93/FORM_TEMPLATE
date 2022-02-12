@@ -7,21 +7,20 @@
   &__icon {
     display: none;
   }
-  &.sort {
-    display: block;
-  }
+  
 }
 
-@media screen and (max-width: 1140) {
+@media screen and (max-width: 520px) {
   .header {
     flex-direction: column;
     &__icon {
       display: block;
     }
-    &.close {
-      display: none;
+    &__sort {
+      display: none
     }
-    &.open {
+    
+    &__open {
       display: block;
     }
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/_FormCard.scss";
+import "../../styles/_formCard.scss";
 
 //  {
 //         "category": [

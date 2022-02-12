@@ -11,17 +11,18 @@ const Header = ({ options, onClickHandler, toggle }) => {
         size={26}
         className="header__icon"
         onClick={() => {
-          onClickHandler;
+          onClickHandler();
         }}
       />
       <Search />
       <nav class="header__sm">
         <span id="burger" class="header__sm__burger" />
       </nav>
-      <SortBy
-        className={toggle ? "header__sort header" : "header__hidesort"}
+      <div className={toggle ? "header__open" : "header__sort"}>
+        <SortBy
         options={options}
-      />
+        />
+      </div>
     </header>
   );
 };

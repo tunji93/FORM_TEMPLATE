@@ -28,6 +28,7 @@ function App() {
   const toggleSort = () => {
     setToggle(!toggle);
   };
+  console.log(toggle)
   const dispatch = useDispatch();
   const queries = useSelector((initialState) => initialState);
   const data = queries.initialState;
@@ -38,7 +39,7 @@ function App() {
   }, [dispatch]);
   return (
     <>
-      <Header options={options} toggle={toggle} onClickHandler={toggleSort()} />
+      <Header options={options} toggle={toggle} onClickHandler={toggleSort} />
       <Alert />;
       <FormCardList
         data={data.forms.slice(0, 200)}
