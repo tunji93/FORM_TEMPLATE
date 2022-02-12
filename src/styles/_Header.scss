@@ -1,0 +1,28 @@
+@import "./_Base.scss";
+
+.header {
+  display: flex;
+  margin-top: 8.7rem;
+  justify-content: space-between;
+  &__icon {
+    display: none;
+  }
+  &.sort {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1140) {
+  .header {
+    flex-direction: column;
+    &__icon {
+      display: block;
+    }
+    &.close {
+      display: none;
+    }
+    &.open {
+      display: block;
+    }
+  }
+}

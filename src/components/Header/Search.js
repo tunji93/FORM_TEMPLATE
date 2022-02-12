@@ -2,10 +2,11 @@ import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import "../../styles/_Search.scss";
 
-const Search = () => {
+const Search = ({ reducer }) => {
   return (
     <div className="search">
       <input
+        name="search"
         type="text"
         className="search__input"
         placeholder="search template"

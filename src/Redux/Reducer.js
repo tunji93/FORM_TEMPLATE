@@ -1,49 +1,73 @@
-import { ALL_FORMS_REQUEST, ALL_FORMS_SUCCESS, ALL_FORMS_FAIL } from "./ActionTypes"
+import {
+  ALL_FORMS_REQUEST,
+  ALL_FORMS_SUCCESS,
+  ALL_FORMS_FAIL,
+  FILTER,
+  ORDER,
+} from "./ActionTypes";
 
-const reducer = (prevState= {
+const reducer = (
+  prevState = {
     forms: [],
-    display: [],
+    order: null,
+    date: null,
     token: 1,
     loading: false,
-    category: null,
+    category: "All",
     error: null,
-    filter: null,
-    search: null
+    search: null,
+  },
+  action
+) => {
+  const { type, payLoad } = action;
 
-}, action) => {
-   const {type,payLoad} =  action 
+  switch (type) {
+    case ALL_FORMS_SUCCESS:
+      return {
+        ...prevState,
+        loading: payLoad.loading,
+        //display: payLoad.forms,
+        forms: payLoad.forms,
+        token: payLoad.page,
+        category: payLoad.categories,
+      };
 
-   switch(type) {
-       case ALL_FORMS_SUCCESS:
-           return {
-               ...prevState,
-               loading: payLoad.loading,
-               //display: payLoad.forms,
-               forms: payLoad.forms,
-               token: payLoad.page,
-               category: payLoad.categories
-           }
-       
-       case ALL_FORMS_REQUEST:
-               return {
-                   ...prevState,
-                   loading: true
+    case ALL_FORMS_REQUEST:
+      return {
+        ...prevState,
+        loading: true,
+      };
 
-                    
-           }
+    case ALL_FORMS_FAIL:
+      return {
+        ...prevState,
+        error: payLoad,
+        loading: false,
+      };
+    case FILTER.search:
+      return {
+        ...prevState,
+        search: payLoad.value,
+      };
+    case FILTER.category:
+      return {
+        ...prevState,
+        category: payLoad.value,
+      };
+    case ORDER.order:
+      return {
+        ...prevState,
+        order: payLoad.value,
+      };
+    case ORDER.date:
+      return {
+        ...prevState,
+        date: payLoad.value,
+      };
 
-       case ALL_FORMS_FAIL:
-               return {
-                   ...prevState,
-                   error: payLoad,
-                   loading: false,
-                    
-           }
+    default:
+      return prevState;
+  }
+};
 
-           
-       default: 
-           return prevState
-   }
-}
-
-export default reducer
+export default reducer;

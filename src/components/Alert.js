@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/_Alert.scss";
 import { RiErrorWarningLine } from "react-icons/ri";
 
 const Alert = () => {

@@ -1,0 +1,33 @@
+@import "./_Base.scss";
+
+.templates {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3.1rem;
+    &__category {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      color: #3f3e3e;
+    }
+    &__count {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: #989898;
+    }
+  }
+  &__cardlist {
+    overflow-y: scroll;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6.7rem;
+    justify-content: space-between;
+  }
+}

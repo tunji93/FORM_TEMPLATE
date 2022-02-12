@@ -30,6 +30,10 @@ html {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: $background-color;
   background-attachment: fixed;
