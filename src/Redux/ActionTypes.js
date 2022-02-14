@@ -13,12 +13,13 @@ const FILTER_BY_CATEGORY = "FILTER_BY_CATEGORY";
 const ORDER_BY_NAME = "ORDER";
 const ORDER_BY_DATE = "ORDER_BY_DATE";
 
-export const FILTER = {
-  search: SEARCH,
-  category: FILTER_BY_CATEGORY,
+export const SORT_BY = {
+   Order: ORDER_BY_NAME,
+   Date: ORDER_BY_DATE,
+   Category: FILTER_BY_CATEGORY
 };
 
 export const ORDER = {
-  order: ORDER_BY_NAME,
-  date: ORDER_BY_DATE,
+  Order: ORDER_BY_NAME,
+  Date: "ORDER_BY_DATE"
 };

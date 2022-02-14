@@ -12,7 +12,7 @@ import "../../styles/_formCard.scss";
 //         "link": "https://formpl.us/templates",
 //         "name": "magna laborum. deserunt"
 //     },
-const FormCard = ({ name, description, link }) => {
+const FormCard = ({name,description,link}) => {
   return (
     <div className="card">
       <div className="card__main">

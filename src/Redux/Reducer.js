@@ -4,10 +4,12 @@ import {
   ALL_FORMS_FAIL,
   FILTER,
   ORDER,
+  SORT_BY
 } from "./ActionTypes";
 
 const reducer = (
   prevState = {
+    AllForms: [],
     forms: [],
     order: null,
     date: null,
@@ -27,6 +29,7 @@ const reducer = (
         ...prevState,
         loading: payLoad.loading,
         //display: payLoad.forms,
+        AllForms: payLoad.forms,
         forms: payLoad.forms,
         token: payLoad.page,
         category: payLoad.categories,
@@ -44,27 +47,26 @@ const reducer = (
         error: payLoad,
         loading: false,
       };
-    case FILTER.search:
+    case SORT_BY.Category:
       return {
         ...prevState,
-        search: payLoad.value,
+        category: payLoad.category,
+        search: payLoad.search,
+        date : payLoad.date,
+        forms: payLoad.data
       };
-    case FILTER.category:
-      return {
-        ...prevState,
-        category: payLoad.value,
-      };
-    case ORDER.order:
+      case SORT_BY.Date:
       return {
         ...prevState,
         order: payLoad.value,
+        forms: payLoad.data
       };
-    case ORDER.date:
+      case SORT_BY.Order:
       return {
         ...prevState,
-        date: payLoad.value,
+        order: payLoad.value,
+        forms: payLoad.data
       };
-
     default:
       return prevState;
   }

@@ -4,7 +4,7 @@ import Search from "./Search";
 import SortBy from "./sortBy";
 import { FaBars } from "react-icons/fa";
 
-const Header = ({ options, onClickHandler, toggle }) => {
+const Header = ({ options, onClickHandler, toggle, call }) => {
   return (
     <header className="header">
       <FaBars
@@ -21,6 +21,7 @@ const Header = ({ options, onClickHandler, toggle }) => {
       <div className={toggle ? "header__open" : "header__sort"}>
         <SortBy
         options={options}
+        call = {call}
         />
       </div>
     </header>
